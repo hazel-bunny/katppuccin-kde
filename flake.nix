@@ -5,7 +5,12 @@
   };
 
   outputs =
-    { self, nixpkgs, whiskers, ... }:
+    {
+      self,
+      nixpkgs,
+      whiskers,
+      ...
+    }:
     let
       systems = [
         "aarch64-darwin"
@@ -28,7 +33,14 @@
       devShells = forEachSystem (
         { pkgs, system }:
         {
-          default = pkgs.mkShell { packages = with pkgs; [ whiskers.packages.${system}.default zip ]; };
+          default = pkgs.mkShell {
+            packages = with pkgs; [
+              whiskers.packages.${system}.default
+              libsForQt5.kpackage
+              kdePackages.kpackage
+              zip
+            ];
+          };
         }
       );
 

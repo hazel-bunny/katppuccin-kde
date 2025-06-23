@@ -131,7 +131,7 @@ Choose a style -
     1. Modern
     2. Classic
 EOF
-    read -r ACCENT
+    read -r STYLE
 fi
 
 case "$STYLE" in
@@ -172,7 +172,7 @@ echo "Done"
 
 echo -n "Fetching zip... "
 # curl "$URL" -o ./theme.zip
-cp "$DISTDIR/catppuccin-mocha-blue.tar.gz" ./theme.tar.gz
+cp "$DISTDIR/catppuccin-$FLAVOURNAME-$ACCENTNAME.tar.gz" ./theme.tar.gz
 echo "Done"
 
 echo -n "Unzipping... "
@@ -193,10 +193,11 @@ cp "$SRCROOT/contents/defaults.$STYLENAME" "$SRCROOT/contents/defaults"
 echo "Done"
 
 echo "Installing KDE theme..."
-kpackagetool5 -i "$SRCROOT"
+kpackagetool6 -i "$SRCROOT"
 echo "Done"
 
 echo -n "Moving files to home dir..."
+mkdir -p "$LOOKANDFEELDIR/catppuccin-$FLAVOURNAME-$ACCENTNAME"
 cp -r "$SRCROOT/Splash/contents/splash" "$LOOKANDFEELDIR/$GLOBALTHEMENAME/contents"
 cp -r "$SRCROOT/Splash/contents/previews" "$LOOKANDFEELDIR/$GLOBALTHEMENAME/contents/previews"
 cp -r "$SRCROOT/catppuccin-$FLAVOURNAME-$STYLENAME" "$AURORAEDIR"
