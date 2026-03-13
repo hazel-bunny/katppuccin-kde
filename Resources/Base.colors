@@ -20,7 +20,7 @@ IntensityEffect=0
 
 [Colors:Button]
 BackgroundAlternate=--accentColor
-BackgroundNormal=$surface0
+BackgroundNormal=$surface1
 DecorationFocus=--accentColor
 DecorationHover=--accentColor
 ForegroundActive=$peach
@@ -34,10 +34,10 @@ ForegroundVisited=$mauve
 
 
 [Colors:Complementary]
-BackgroundAlternate=$crust
-BackgroundNormal=$mantle
+BackgroundAlternate=$base
+BackgroundNormal=$crust
 DecorationFocus=--accentColor
-DecorationHover=$surface0
+DecorationHover=$surface2
 ForegroundActive=$peach
 ForegroundInactive=$subtext0
 ForegroundLink=--accentColor
@@ -50,7 +50,7 @@ ForegroundVisited=$mauve
 
 [Colors:Header]
 BackgroundAlternate=$crust
-BackgroundNormal=$mantle
+BackgroundNormal=$base
 DecorationFocus=--accentColor
 DecorationHover=--accentColor
 ForegroundActive=$peach
@@ -64,11 +64,10 @@ ForegroundVisited=$mauve
 
 
 [Colors:Selection]
-BackgroundAlternate=--accentColor
+BackgroundAlternate=$surface1
 BackgroundNormal=--accentColor
 DecorationFocus=--accentColor
 DecorationHover=--accentColor
-ForegroundLink=--accentColor
 ForegroundInactive=$mantle
 ForegroundActive=$peach
 ForegroundLink=--accentColor
@@ -80,8 +79,8 @@ ForegroundVisited=$mauve
 
 
 [Colors:Tooltip]
-BackgroundAlternate=27,25,35
-BackgroundNormal=$base
+BackgroundAlternate=$base
+BackgroundNormal=$mantle
 DecorationFocus=--accentColor
 DecorationHover=--accentColor
 ForegroundActive=$peach
@@ -96,7 +95,7 @@ ForegroundVisited=$mauve
 
 [Colors:View]
 BackgroundAlternate=$mantle
-BackgroundNormal=$base
+BackgroundNormal=$surface0
 DecorationFocus=--accentColor
 DecorationHover=--accentColor
 ForegroundActive=$peach
@@ -111,7 +110,7 @@ ForegroundVisited=$mauve
 
 [Colors:Window]
 BackgroundAlternate=$crust
-BackgroundNormal=$mantle
+BackgroundNormal=$base
 DecorationFocus=--accentColor
 DecorationHover=--accentColor
 ForegroundActive=$peach
@@ -125,20 +124,20 @@ ForegroundVisited=$mauve
 
 
 [General]
-ColorScheme=Catppuccin--flavour--accentName
-Name=Catppuccin --flavour --accentName
+ColorScheme=Catppuccin--flavourHC--accentName
+Name=Catppuccin --flavour High Contrast --accentName
 accentActiveTitlebar=false
 shadeSortColumn=true
 
 
 [KDE]
 contrast=4
-
+frameContrast=0.1
 
 [WM]
 activeBackground=$base
-activeBlend=$text
+activeBlend=$overlay0
 activeForeground=$text
-inactiveBackground=$crust
-inactiveBlend=$subtext0
+inactiveBackground=$base
+inactiveBlend=$surface2
 inactiveForeground=$subtext0
