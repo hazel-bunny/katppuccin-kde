@@ -378,19 +378,22 @@ GetCursor() {
     # Fetches cursors
     echo "Downloading Catppuccin Cursors from Catppuccin/cursors..."
     sleep 2
-    wget -q -P ./dist https://github.com/catppuccin/cursors/releases/download/v0.2.0/Catppuccin-"$FLAVOURNAME"-"$ACCENTNAME"-Cursors.zip
-    wget -q -P ./dist https://github.com/catppuccin/cursors/releases/download/v0.2.0/Catppuccin-"$FLAVOURNAME"-Dark-Cursors.zip
+    wget -q -P ./dist https://github.com/catppuccin/cursors/releases/download/"$CURSORVERSION"/"$CURSORACCENT".zip
+    wget -q -P ./dist https://github.com/catppuccin/cursors/releases/download/"$CURSORVERSION"/"$CURSORDARK".zip
     (
         cd ./dist || exit
-        unzip -q Catppuccin-"$FLAVOURNAME"-"$ACCENTNAME"-Cursors.zip
-        unzip -q Catppuccin-"$FLAVOURNAME"-Dark-Cursors.zip
+        unzip -q "$CURSORACCENT".zip
+        unzip -q "$CURSORDARK".zip
     )
 }
 
 InstallCursor() {
+    CURSORVERSION="v2.0.0"
+    CURSORACCENT="catppuccin-${FLAVOURNAME,,}-${ACCENTNAME,,}-cursors"
+    CURSORDARK="catppuccin-${FLAVOURNAME,,}-dark-cursors"
     GetCursor
-    mv ./dist/Catppuccin-"$FLAVOURNAME"-"$ACCENTNAME"-Cursors "$CURSORDIR"
-    mv ./dist/Catppuccin-"$FLAVOURNAME"-Dark-Cursors "$CURSORDIR"
+    mv ./dist/"$CURSORACCENT" "$CURSORDIR"
+    mv ./dist/"$CURSORDARK" "$CURSORDIR"
 }
 
 # Syntax <Flavour> <Accent> <WindowDec> <Debug = aurorae/global/color/splash/cursor>
