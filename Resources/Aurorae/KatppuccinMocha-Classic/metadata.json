@@ -2,8 +2,8 @@
     "KPlugin": {
         "Authors": [
             {
-                "Email": "core@catppuccin.com",
-                "Name": "Catppuccin"
+                "Email": "hazel_bunny@disroot.org",
+                "Name": "Katppuccin"
             }
         ],
         "Category": "",
@@ -11,9 +11,9 @@
         ],
         "EnabledByDefault": true,
         "Description": "Soothing Pastel theme for Kwin",
-        "Id": "CatppuccinMacchiato-Classic",
+        "Id": "KatppuccinMocha-Classic",
         "License": "MIT",
-        "Name": "Catppuccin Macchiato Classic",
-        "Version": "0.2.6"
+        "Name": "Katppuccin Mocha Classic",
+        "Version": "0.2.8"
     }
 }

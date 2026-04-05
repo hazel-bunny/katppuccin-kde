@@ -3,20 +3,19 @@
     "KPlugin": {
         "Authors": [
             {
-                "Email": "core@catppuccin.com",
-                "Name": "Catppuccin"
+                "Email": "hazel_bunny@disroot.org",
+                "Name": "Katppuccin"
             }
         ],
         "Category": "Global Themes (Plasma 6)",
         "Dependencies": [
         ],
         "EnabledByDefault": true,
-        "Id": "Catppuccin---flavour---accentName",
+        "Id": "Katppuccin---flavour---accentName",
         "License": "MIT",
-        "Name": "Catppuccin --flavour --accentName",
-        "Version": "0.2.6"
+        "Name": "Katppuccin --flavour --accentName",
+        "Version": "0.2.8"
     },
     "X-KPackage-Dependencies": [
-        "kns://aurorae.knsrc/api.kde-look.org/--StoreAuroraeNo"
     ]
 }

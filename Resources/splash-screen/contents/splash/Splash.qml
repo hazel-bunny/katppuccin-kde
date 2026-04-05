@@ -1,6 +1,6 @@
 /*
     SPDX-FileCopyrightText:
-    2023 Cequal-Catppuccin <core@Catppuccin.com>
+    2023 hazel-bunny <hazel_bunny@disroot.org>
     Based on
     2014 Marco Martin <mart@kde.org>
 

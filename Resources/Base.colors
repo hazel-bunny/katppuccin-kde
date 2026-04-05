@@ -1,20 +1,20 @@
 [ColorEffects:Disabled]
 Color=$base
-ColorAmount=0.30000000000000004
+ColorAmount=0.5
 ColorEffect=2
-ContrastAmount=0.1
-ContrastEffect=0
-IntensityAmount=-1
-IntensityEffect=0
+ContrastAmount=0.5
+ContrastEffect=1
+IntensityAmount=0.25
+IntensityEffect=2
 
 [ColorEffects:Inactive]
 ChangeSelectionColor=true
 Color=$base
 ColorAmount=0.5
-ColorEffect=3
-ContrastAmount=0
-ContrastEffect=0
-Enable=true
+ColorEffect=2
+ContrastAmount=0.25
+ContrastEffect=2
+Enable=false
 IntensityAmount=0
 IntensityEffect=0
 
@@ -80,7 +80,7 @@ ForegroundVisited=$mauve
 
 [Colors:Tooltip]
 BackgroundAlternate=$base
-BackgroundNormal=$mantle
+BackgroundNormal=$surface1
 DecorationFocus=--accentColor
 DecorationHover=--accentColor
 ForegroundActive=$peach
@@ -124,8 +124,8 @@ ForegroundVisited=$mauve
 
 
 [General]
-ColorScheme=Catppuccin--flavourHC--accentName
-Name=Catppuccin --flavour High Contrast --accentName
+ColorScheme=Katppuccin--flavour--accentName
+Name=Katppuccin --flavour --accentName
 accentActiveTitlebar=false
 shadeSortColumn=true
 

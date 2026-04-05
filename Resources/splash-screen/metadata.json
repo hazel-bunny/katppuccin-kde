@@ -3,17 +3,17 @@
     "KPlugin": {
         "Authors": [
             {
-                "Email": "core@catppuccin.com",
-                "Name": "Catppuccin"
+                "Email": "hazel_bunny@disroot.org",
+                "Name": "Katppuccin"
             }
         ],
         "Category": "Plasma Look And Feel",
         "Dependencies": [
         ],
         "EnabledByDefault": true,
-        "Id": "Catppuccin---flavour---accentName-splash",
+        "Id": "Katppuccin---flavour---accentName-splash",
         "License": "MIT",
-        "Name": "Catppuccin --flavour --accentName",
-        "Version": "0.2.6"
+        "Name": "Katppuccin --flavour --accentName",
+        "Version": "0.2.8"
     }
 }

@@ -251,8 +251,8 @@ case "$ACCENT" in
 esac
 echo "$ACCENTNAME($ACCENT) accent color was selected."
 
-GLOBALTHEMENAME="Catppuccin-$FLAVOURNAME-$ACCENTNAME"
-SPLASHSCREENNAME="Catppuccin-$FLAVOURNAME-$ACCENTNAME-splash"
+GLOBALTHEMENAME="Katppuccin-$FLAVOURNAME-$ACCENTNAME"
+SPLASHSCREENNAME="Katppuccin-$FLAVOURNAME-$ACCENTNAME-splash"
 
 if [ -z "$3" ]; then
     cat <<EOF
@@ -269,7 +269,7 @@ WINDECSTYLENAME=""
 case "$WINDECSTYLE" in
     1)
         WINDECSTYLENAME=Modern
-        WINDECSTYLECODE=__aurorae__svg__Catppuccin"$FLAVOURNAME"-Modern
+        WINDECSTYLECODE=__aurorae__svg__Katppuccin"$FLAVOURNAME"-Modern
 
         case "$FLAVOUR" in
             1) StoreAuroraeNo="2135229" ;;
@@ -290,7 +290,7 @@ EOF
         ;;
     2)
         WINDECSTYLENAME=Classic
-        WINDECSTYLECODE=__aurorae__svg__Catppuccin"$FLAVOURNAME"-Classic
+        WINDECSTYLECODE=__aurorae__svg__Katppuccin"$FLAVOURNAME"-Classic
 
         case "$FLAVOUR" in
             1) StoreAuroraeNo="2135228" ;;
@@ -311,7 +311,7 @@ BuildColorscheme() {
     # Add Metadata & Replace Accent in colors file
     sed "s/--accentColor/$ACCENTCOLOR/g; s/--flavour/$FLAVOURNAME/g; s/--accentName/$ACCENTNAME/g" ./Resources/Base.colors > ./dist/base.colors
     # Hydrate Dummy colors according to Pallet
-    ./Installer/color-build.sh -f "$FLAVOURNAME" -o ./dist/Catppuccin"$FLAVOURNAME$ACCENTNAME".colors -s ./dist/base.colors
+    ./Installer/color-build.sh -f "$FLAVOURNAME" -o ./dist/Katppuccin"$FLAVOURNAME$ACCENTNAME".colors -s ./dist/base.colors
 }
 
 BuildSplashScreen() {
@@ -348,28 +348,28 @@ BuildSplashScreen() {
 
 InstallAuroraeTheme() {
 	# Prepare Aurorae Theme Folder
-	cp -r ./Resources/Aurorae/Catppuccin"$FLAVOURNAME"-"$WINDECSTYLENAME" ./dist/
+	cp -r ./Resources/Aurorae/Katppuccin"$FLAVOURNAME"-"$WINDECSTYLENAME" ./dist/
     if [ "$FLAVOUR" -eq 4 ]; then
-		cp ./Resources/Aurorae/Common/CatppuccinLatte-"$WINDECSTYLENAME"rc ./dist/Catppuccin"$FLAVOURNAME"-"$WINDECSTYLENAME"/Catppuccin"$FLAVOURNAME"-"$WINDECSTYLENAME"rc
+		cp ./Resources/Aurorae/Common/KatppuccinLatte-"$WINDECSTYLENAME"rc ./dist/Katppuccin"$FLAVOURNAME"-"$WINDECSTYLENAME"/Katppuccin"$FLAVOURNAME"-"$WINDECSTYLENAME"rc
 	else
-		cp ./Resources/Aurorae/Common/Catppuccin-"$WINDECSTYLENAME"rc ./dist/Catppuccin"$FLAVOURNAME"-"$WINDECSTYLENAME"/Catppuccin"$FLAVOURNAME"-"$WINDECSTYLENAME"rc
+		cp ./Resources/Aurorae/Common/Katppuccin-"$WINDECSTYLENAME"rc ./dist/Katppuccin"$FLAVOURNAME"-"$WINDECSTYLENAME"/Katppuccin"$FLAVOURNAME"-"$WINDECSTYLENAME"rc
 	fi
 
 	echo "Installing Aurorae Theme..."
-	cp -r ./dist/Catppuccin"$FLAVOURNAME"-"$WINDECSTYLENAME"/ "$AURORAEDIR"
+	cp -r ./dist/Katppuccin"$FLAVOURNAME"-"$WINDECSTYLENAME"/ "$AURORAEDIR"
 }
 
 InstallGlobalTheme() {
     # Prepare Global Theme Folder
-    cp -r ./Resources/LookAndFeel/Catppuccin-"$FLAVOURNAME"-Global ./dist/"$GLOBALTHEMENAME"
+    cp -r ./Resources/LookAndFeel/Katppuccin-"$FLAVOURNAME"-Global ./dist/"$GLOBALTHEMENAME"
     mkdir -p ./dist/"$SPLASHSCREENNAME"/contents/splash/images
 
     # Hydrate Metadata with Pallet + Accent Info
-    sed "s/--accentName/$ACCENTNAME/g; s/--flavour/$FLAVOURNAME/g; s/--StoreAuroraeNo/$StoreAuroraeNo/g" ./Resources/LookAndFeel/metadata.desktop > ./dist/Catppuccin-"$FLAVOURNAME"-"$ACCENTNAME"/metadata.desktop
-	sed "s/--accentName/$ACCENTNAME/g; s/--flavour/$FLAVOURNAME/g; s/--StoreAuroraeNo/$StoreAuroraeNo/g" ./Resources/LookAndFeel/metadata.json > ./dist/Catppuccin-"$FLAVOURNAME"-"$ACCENTNAME"/metadata.json
+    sed "s/--accentName/$ACCENTNAME/g; s/--flavour/$FLAVOURNAME/g; s/--StoreAuroraeNo/$StoreAuroraeNo/g" ./Resources/LookAndFeel/metadata.desktop > ./dist/Katppuccin-"$FLAVOURNAME"-"$ACCENTNAME"/metadata.desktop
+	sed "s/--accentName/$ACCENTNAME/g; s/--flavour/$FLAVOURNAME/g; s/--StoreAuroraeNo/$StoreAuroraeNo/g" ./Resources/LookAndFeel/metadata.json > ./dist/Katppuccin-"$FLAVOURNAME"-"$ACCENTNAME"/metadata.json
 
     # Modify 'defaults' to set the correct Aurorae Theme
-    sed "s/--accentName/$ACCENTNAME/g; s/--flavour/$FLAVOURNAME/g; s/--aurorae/$WINDECSTYLECODE/g" ./Resources/LookAndFeel/defaults > ./dist/Catppuccin-"$FLAVOURNAME"-"$ACCENTNAME"/contents/defaults
+    sed "s/--accentName/$ACCENTNAME/g; s/--flavour/$FLAVOURNAME/g; s/--aurorae/$WINDECSTYLECODE/g" ./Resources/LookAndFeel/defaults > ./dist/Katppuccin-"$FLAVOURNAME"-"$ACCENTNAME"/contents/defaults
 
 
 
@@ -404,7 +404,7 @@ InstallColorscheme() {
 
     # Install Colorscheme
     echo "Installing Colorscheme.."
-    mv ./dist/Catppuccin"$FLAVOURNAME$ACCENTNAME".colors "$COLORDIR"
+    mv ./dist/Katppuccin"$FLAVOURNAME$ACCENTNAME".colors "$COLORDIR"
 }
 
 GetCursor() {
@@ -451,9 +451,9 @@ case "$DEBUGMODE" in
         ;;
     splash)
         # Prepare Global Theme Folder
-        GLOBALTHEMENAME="Catppuccin-$FLAVOURNAME-$ACCENTNAME"
+        GLOBALTHEMENAME="Katppuccin-$FLAVOURNAME-$ACCENTNAME"
 
-        cp -r ./Resources/LookAndFeel/Catppuccin-"$FLAVOURNAME"-Global ./dist/"$GLOBALTHEMENAME"
+        cp -r ./Resources/LookAndFeel/Katppuccin-"$FLAVOURNAME"-Global ./dist/"$GLOBALTHEMENAME"
         mkdir -p ./dist/"$GLOBALTHEMENAME"/contents/splash/images
 
         BuildSplashScreen

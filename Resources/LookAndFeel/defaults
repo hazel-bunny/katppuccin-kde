@@ -1,5 +1,5 @@
 [kdeglobals][General]
-ColorScheme=Catppuccin--flavour--accentName
+ColorScheme=Katppuccin--flavour--accentName
 
 [kcminputrc][Mouse]
 cursorTheme=Catppuccin---flavour---accentName-Cursors
@@ -14,4 +14,4 @@ theme=--aurorae
 name=default
 
 [KSplash]
-Theme=Catppuccin---flavour---accentName-splash
+Theme=Katppuccin---flavour---accentName-splash
