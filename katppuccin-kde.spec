@@ -3,9 +3,9 @@
 Name:           %{_basename}-colors
 Version:        0.2.8
 
-%global forgeurl https://github.com/hazel-bunny/%{name}
+%global forgeurl https://github.com/hazel-bunny/%{_basename}
 %global tag %{version}
-%global date 20260406
+%global date 20260408
 %forgemeta
 
 Release:        0%{?dist}
@@ -21,7 +21,7 @@ Requires:       %{name}-frappe
 Requires:       %{name}-macchiato
 Requires:       %{name}-mocha
 
-Recommends:     catppuccin-cursors
+Suggests:       catppuccin-cursors
 
 %description
 %{summary}.
@@ -115,5 +115,5 @@ mv dist/Katppuccin*.colors %{buildroot}%{_datadir}/color-schemes/
 #---------------------------------------------------------------------------------------------------
 
 %changelog
-* Sat Apr 4 2026 Hazel Bunny <hazel_bunny@disroot.org> - 0.2.8-0
+* Wed Apr 8 2026 Hazel Bunny <hazel_bunny@disroot.org> - 0.2.8-0
 - Intial snapshot
